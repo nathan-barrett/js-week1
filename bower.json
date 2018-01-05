@@ -1,0 +1,22 @@
+{
+  "name": "js-week1",
+  "description": "#### _Behavior Driven Development: Friday Project using Node.js, Bower, Gulp and Jasmine, November 17, 2017_",
+  "main": "index.js",
+  "authors": [
+    "nathan-barrett <demeules.barrett@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nathan-barrett/js-week1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.20.1"
+  }
+}

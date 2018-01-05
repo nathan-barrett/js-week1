@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nathan-barrett/js-week1#readme",
   "devDependencies": {
+    "bower-files": "^4.0.0",
     "browserify": "^15.0.0",
     "concat": "^1.0.3",
     "del": "^3.0.0",
