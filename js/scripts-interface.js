@@ -1,4 +1,4 @@
-import { currentTime, Birthday } from './../js/scripts.js';
+import { Birthday, CurrentTime } from './../js/scripts.js';
 
 $(function(){
   $("form#age-form").submit(function(event){
@@ -10,9 +10,30 @@ $(function(){
         return false;
       }
     const inputYear = parseInt($("#yearInput").val());
-    const inputAge = new Birthday(inputDay, inputMonth, inputYear);
-    const secz = inputAge.birthInSeconds(inputAge.userDay, inputAge.userMonth, inputAge.userYear);
-    console.log(secz);
+    if (inputYear < 1 || inputYear > 3000) {
+      alert("please enter a valid birth day");
+      return false;
+    }
+    const userBirthday = new Birthday(inputDay, inputMonth, inputYear);
+    const currentSec = moment().second();
+    const currentMin = moment().minute();
+    const currentDay = moment().day();
+    const currentMonth = (moment().month() + 1);
+    const currentYear = moment().year();
+    const currentTime = new CurrentTime(currentSec, currentMin, currentDay, currentMonth, currentYear);
+    const userSeconds = userBirthday.birthInSeconds(inputDay, inputMonth, inputYear);
+    const currentTimeSec = currentTime.currentToSeconds(currentSec, currentMin, currentDay, currentMonth, currentYear);
+    const ageInSec = userBirthday.ageInSeconds(userSeconds, currentTimeSec);
+    const earthAgeYear = userBirthday.ageOnEarth(ageInSec);
+    const mercAgeYear = userBirthday.ageOnMerc(ageInSec);
+    const venAgeYear = userBirthday.ageOnVen(ageInSec);
+    const marsAgeYear = userBirthday.ageOnMars(ageInSec);
+    const jupAgeYear = userBirthday.ageOnJup(ageInSec);
+
+
+
+
+
 
   });
 });

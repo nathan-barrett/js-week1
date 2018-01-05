@@ -1,35 +1,35 @@
-const secInYear = 3.154e+7
+const secInYear = 3.154e+7;
 const secInMonth = 2.628e+6;
 const secInDay = 86400;
-const mercYear = secInYear * .24;
-const venYear = secInYear * .62;
+const mercYear = secInYear * 0.24;
+const venYear = secInYear * 0.62;
 const marsYear = secInYear * 1.88;
 const jupYear = secInYear * 11.86;
 
+
 export class CurrentTime {
-  contructor() {
-    this.currentSeconds = seconds;
-    this.miuntes = minutes;
+  contructor(seconds, minutes, day, month, year) {
+    this.seconds = seconds;
+    this.minutes = minutes;
+    this.day = day;
     this.month = month;
     this.year = year;
   }
-
-
-  currentToSeconds(seconds, minutes, month, year) {
-    const currentMin = minutes * 60;
-    const currentMonth = month * secInMonth;
-    const currentYear = year * secInYear;
-    return seconds + currentMin + currentMonth + currentYear;
+  currentToSeconds(seconds, minutes, day, month, year) {
+    const currentMinSec = minutes * 60;
+    const currentDaySec = day * secInDay;
+    const currentMonthSec = month * secInMonth;
+    const currentYearSec = year * secInYear;
+    return seconds + currentMinSec + currentMinSec + currentMonthSec + currentYearSec;
   }
 }
 export class Birthday {
   contructor(day, month, year){
-    this.userDay = day;
-    this.userMonth = month;
-    this.userYear = year;
+    this.day = day;
+    this.month = month;
+    this.year = year;
   }
   birthInSeconds(day, month, year){
-    debugger;
     const dayAge = day * secInDay;
     const monthAge = month * secInMonth;
     const yearAge = year * secInYear;
@@ -39,17 +39,24 @@ export class Birthday {
     const secondsAge = current - age;
     return secondsAge;
   }
-  ageonPlanets(age){
-    const earthAge = age / secInYear;
-    const mercAge = age / mercYear;
-    const venAge = age / venYear;
-    const marsAge = age / marsYear;
-    const jupAge = age / jupYear;
+  ageOnEarth(age){
+    const earthAge = Math.floor(age / secInYear);
     return earthAge;
+  }
+  ageOnMerc(age){
+    const mercAge = age / mercYear;
     return mercAge;
+  }
+  ageOnVen(age){
+    const venAge = age / venYear;
     return venAge;
+  }
+  ageOnMars(age){
+    const marsAge = age / marsYear;
     return marsAge;
+  }
+  ageOnJup(age){
+    const jupAge = age / jupYear;
     return jupAge;
-  };
-
+  }
 }
