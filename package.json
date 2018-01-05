@@ -1,0 +1,25 @@
+{
+  "name": "js-week1",
+  "version": "1.0.0",
+  "description": "#### _Behavior Driven Development: Friday Project using Node.js, Bower, Gulp and Jasmine, November 17, 2017_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathan-barrett/js-week1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathan-barrett/js-week1/issues"
+  },
+  "homepage": "https://github.com/nathan-barrett/js-week1#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "browserify": "^15.0.0"
+  }
+}
