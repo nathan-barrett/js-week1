@@ -1,6 +1,7 @@
 const secInYear = 3.154e+7;
 const secInMonth = 2.628e+6;
 const secInDay = 86400;
+const secInHr = 3600;
 const mercYear = secInYear * 0.24;
 const venYear = secInYear * 0.62;
 const marsYear = secInYear * 1.88;
@@ -15,12 +16,13 @@ export class CurrentTime {
     this.month = month;
     this.year = year;
   }
-  currentToSeconds(seconds, minutes, day, month, year) {
+  currentToSeconds(seconds, minutes, hour,  day, month, year) {
     const currentMinSec = minutes * 60;
+    const currentHrSec = hour * secInHr;
     const currentDaySec = day * secInDay;
     const currentMonthSec = month * secInMonth;
     const currentYearSec = year * secInYear;
-    return seconds + currentMinSec + currentMinSec + currentMonthSec + currentYearSec;
+    return seconds + currentMinSec + currentHrSec + currentDaySec + currentMonthSec + currentYearSec;
   }
 }
 export class Birthday {
@@ -44,19 +46,19 @@ export class Birthday {
     return earthAge;
   }
   ageOnMerc(age){
-    const mercAge = age / mercYear;
+    const mercAge = Math.floor(age / mercYear);
     return mercAge;
   }
   ageOnVen(age){
-    const venAge = age / venYear;
+    const venAge = Math.floor(age / venYear);
     return venAge;
   }
   ageOnMars(age){
-    const marsAge = age / marsYear;
+    const marsAge = Math.floor(age / marsYear);
     return marsAge;
   }
   ageOnJup(age){
-    const jupAge = age / jupYear;
+    const jupAge = Math.floor(age / jupYear);
     return jupAge;
   }
 }

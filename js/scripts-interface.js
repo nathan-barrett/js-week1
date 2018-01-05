@@ -17,10 +17,11 @@ $(function(){
     const userBirthday = new Birthday(inputDay, inputMonth, inputYear);
     const currentSec = moment().second();
     const currentMin = moment().minute();
+    const currentHr = moment().hour();
     const currentDay = moment().day();
     const currentMonth = (moment().month() + 1);
     const currentYear = moment().year();
-    const currentTime = new CurrentTime(currentSec, currentMin, currentDay, currentMonth, currentYear);
+    const currentTime = new CurrentTime(currentSec, currentMin, currentHr, currentDay, currentMonth, currentYear);
     const userSeconds = userBirthday.birthInSeconds(inputDay, inputMonth, inputYear);
     const currentTimeSec = currentTime.currentToSeconds(currentSec, currentMin, currentDay, currentMonth, currentYear);
     const ageInSec = userBirthday.ageInSeconds(userSeconds, currentTimeSec);

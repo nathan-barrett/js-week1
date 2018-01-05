@@ -30,7 +30,7 @@ _This is an application which will (hopefully) calculate a user's age by compari
 |Return age of a human in Venus years| User Input: 20 | 12.4 |
 |Return age of a human in Mars years| User Input: 20 | 37.6 |
 |Return age of a human in Jupiter years| User Input: 20 | 237.2|
-|Convert a time in earth years, months, days, second, minutes and seconds into earth seconds| Earth years = 10, earth months = 10, earth days = 10, earth minutes = 10, earth seconds = 10 | |
+|Convert a time in earth years, months, days, second, minutes and seconds into earth seconds| Current Time | |
 
 ## Known Bugs
 
