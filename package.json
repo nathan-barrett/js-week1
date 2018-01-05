@@ -4,7 +4,7 @@
   "description": "#### _Behavior Driven Development: Friday Project using Node.js, Bower, Gulp and Jasmine, November 17, 2017_",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -17,16 +17,35 @@
   },
   "homepage": "https://github.com/nathan-barrett/js-week1#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
     "bower-files": "^4.0.0",
+    "browser-sync": "^2.23.3",
     "browserify": "^15.0.0",
     "concat": "^1.0.3",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "jasmine": "^2.8.0",
+    "jasmine-core": "^2.8.0",
+    "jasmine-expect": "^3.8.1",
     "jshint": "^2.9.5",
-    "vinyl-source-stream": "^2.0.0"
+    "karma": "^2.0.0",
+    "karma-browserify": "^5.1.3",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-jasmine-matchers": "^3.7.0",
+    "karma-jquery": "^0.2.2",
+    "util": "^0.10.3",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.9.0"
   },
   "dependencies": {}
 }
