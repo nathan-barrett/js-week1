@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/main.css">
+    <script src="build/js/vendor.min.js" charset="utf-8"></script>
+    <script src="build/js/app.js" charset="utf-8"></script>
     <meta charset="utf-8">
     <title>Super Galactic Age Calculator</title>
   </head>
   <body>
-    <h1>Calculate your age!</h1>
-    <form class="age" action="index.html" method="post">
-      <label for="ageInput">Enter your age!</label>
-      <input type="text" name="ageInput" value="">
-      <button type="submit" name="button">click me, weirdo!</button>
-    </form>
+    <div class="container">
+      <h1>Calculate your age!</h1>
+      <form id="age-form" class="form-group" action="index.html" method="post">
+        <label for="ageInput">Month</label>
+        <select id="monthInput" name="">
+          <option value="1">Janurary</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+        <label for="ageInput">Day</label>
+        <input type="number" id="dayInput">
+        <label for="ageInput">Year</label>
+        <input type="number" id="yearInput">
+
+        <button class="btn-info"type="submit" name="button">click me, weirdo!</button>
+      </form>
+
+    </div>
   </body>
 </html>
