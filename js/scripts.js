@@ -61,12 +61,19 @@ export class Birthday {
     const jupAge = Math.floor(age / jupYear);
     return jupAge;
   }
-  lifeExpect(yearBorn, smoke, gender, planet) {
-    if (yearBorn >= 1980 && yearBorn <= 2017 && smoke === "no" && gender === "female" && planet === "earth") {
-      return "Looks like you will live to the tender age of 81 years old. You will die" + (81 - yearBorn) + " years from now";
-    } else if (yearBorn >= 1980 && yearBorn <= 2017 && smoke === "yes" && gender === "female" && planet === "earth") {
-      return "Looks like you will live to the tender age of 75 years old. you will die" + (75 - yearBorn) + " years from now";
+  lifeExpect(yearBorn, age, gender, planet) {
+    if (planet !== earth ) {
+      return "At most, you would last about 15 seconds before losing conciousness from lack of oxygen. (That's how long it would take the body to use up the oxygen left in the blood.) Remember, in space no one can hear you scream.";
+    } else if (yearBorn >= 1980 && yearBorn <= 2017  && gender === "female" && planet === "earth") {
+      return "Looks like you will live to the tender age of 81 years old. You will die" + (81 - age) + " years from now";
+    } else if (yearBorn >= 1980 && yearBorn <= 2017 && gender === "male" && planet === "earth") {
+      return "Looks like you will live to the tender age of 75 years old. you will die" + (75 - age) + " years from now";
+    }else if (yearBorn < 1980 && yearBorn >= 1900 && gender === "female" && planet === "earth") {
+      return "Looks like you will live to the tender age of 52 years old. you will die in" + (yearBorn + 52) + ", good luck?";
+    }else if (yearBorn < 1980 && yearBorn >= 1900 && gender === "male" && planet === "earth") {
+      return "Looks like you will live to the tender age of 52 years old. you will die in" + (yearBorn + 52) + ", good luck?";
+    } else if (yearBorn < 1900 || yearBorn > 2017) {
+      return "looks like u ded";
     }
-
   }
 }

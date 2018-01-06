@@ -29,15 +29,23 @@
           <option value="12">December</option>
         </select>
         <label for="ageInput">Day</label>
-        <input type="number" id="dayInput">
+        <input type="number" id="dayInput" required>
         <label for="ageInput">Year</label>
-        <input type="number" id="yearInput">
-
+        <input type="number" id="yearInput" required>
+        <select id="planetInput" name="">
+          <option value="earth">Earth</option>
+          <option value="Mercury">Mercury</option>
+          <option value="Venus">Venus</option>
+          <option value="Mars">Venus</option>
+          <option value="Jupiter">Jupiter</option>
+        </select>
+        <label for=""></label>
         <button class="btn-info"type="submit" name="button">click me, weirdo!</button>
       </form>
-      <div class="whats-my-age-again">
-        <ul>
+      <div>
+        <ul class="whats-my-age-again">
         </ul>
+        <p class="life"></p>
       </div>
     </div>
   </body>
