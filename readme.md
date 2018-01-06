@@ -1,6 +1,6 @@
 # BDD: Super Galactic Age Calculator
 
-#### _Behavior Driven Development: Friday Project using Node.js, Bower, Gulp and Jasmine, November 17, 2017_
+#### _Behavior Driven Development: Friday Project using Node.js, Bower, Gulp and Jasmine, January,5, 2018_
 
 #### By _**Nathan Barrett**_
 
@@ -39,7 +39,7 @@ _None at this time._
 
 ## Support and contact details
 
-_Please feel free to reach out with any questions, etc. to nathan-barrett on GitHub
+Please feel free to reach out with any questions, etc. to nathan-barrett on GitHub
 
 
 ## Technologies Used
