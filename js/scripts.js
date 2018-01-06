@@ -61,4 +61,12 @@ export class Birthday {
     const jupAge = Math.floor(age / jupYear);
     return jupAge;
   }
+  lifeExpect(yearBorn, smoke, gender, planet) {
+    if (yearBorn >= 1980 && yearBorn <= 2017 && smoke === "no" && gender === "female" && planet === "earth") {
+      return "Looks like you will live to the tender age of 81 years old. You will die" + (81 - yearBorn) + " years from now";
+    } else if (yearBorn >= 1980 && yearBorn <= 2017 && smoke === "yes" && gender === "female" && planet === "earth") {
+      return "Looks like you will live to the tender age of 75 years old. you will die" + (75 - yearBorn) + " years from now";
+    }
+
+  }
 }
